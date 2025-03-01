@@ -1,0 +1,394 @@
+body
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Video-backgroud video
+{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+}
+.content
+{
+    position:fixed;
+    top: 20em;
+    left: 2%;
+    max-width:auto;
+    color: white;
+    z-index: 1;
+}
+.play-btn
+{
+  
+   margin-left: 4em;
+   display: inline-flex;
+   align-items:center;
+   max-width: 75px;
+   height: 3em;
+   text-indent: 5px;
+   color:black;
+   background-color: white;
+   font-weight: bold;
+   font-size: medium;
+   padding: 5px;
+   border-radius: 5px;
+}
+.more-info
+{
+    display: inline-flex;
+    align-items:center;
+    background-color:grey;
+    color:white;
+    text-indent: 5px;
+    height: 3em;
+    font-weight: bold;
+    font-size: 16px;
+    fill: currentColor;
+    border-radius: 5px;
+}
+.more-info svg
+{
+    width: 25px;
+}
+.play-btn svg
+{
+    width: 20px;
+    margin-left: 3px;
+}
+.content p
+{
+  position: relative;
+  width: 50%;
+  left: 60px;
+}
+.Navigation
+{
+    position: fixed;
+    top:0;
+    width: 98%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    z-index: 2;
+}
+.Left-nav
+{
+    display: flex;
+    align-items: center;
+}
+.Left-nav ul
+{
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+.Left-nav li a
+{
+    color:white;
+    text-decoration: none;
+}
+.Left-nav li a:hover
+{
+    color: chartreuse;
+}
+.Left-nav img
+{
+    width: 10em;
+    height: 7em;
+}
+.Right-nav
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+.Search-icon,.Notification
+{
+    width:35px;
+    height: 35px;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    fill: currentColor;
+    cursor: pointer;
+}
+.Notification
+{
+    position: relative;
+}
+.Notification span
+{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    background-color: red;
+    color: white;
+    width: 12px;
+    font-size: small;
+    padding-right:5px;
+    height: 15px;
+    position: relative;
+    right: -15px;
+    border-radius: 50%;
+    top: -36px;
+}
+.kid
+{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+.kid:hover
+{
+    cursor: pointer;
+    color: chartreuse; 
+}
+.Profile img
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding-bottom:5px;
+}
+.dropdown
+{
+    position: relative;
+    box-shadow: 0 0 10px rgb(0,0,0,0.1);
+}
+.dropdown ul
+{
+  display: none;
+  position: absolute;
+  top: 100%;
+  right:0;
+  margin:0;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  list-style: none;
+  z-index: 1;
+}
+.dropdown li 
+{
+   padding: 2px 0;
+   white-space: nowrap;
+}
+.dropdown li a
+{
+    text-decoration: none;
+    color: black;
+}
+.dropdown li a:hover
+{
+    color: hotpink;
+    cursor: pointer;
+}
+.Profile:hover .dropdown ul
+{
+    display: block;
+}
+.Separate
+{
+  border-top: 2px solid black;
+  margin-top: 5px;
+}
+.hamburger
+{
+    display:none;
+    position: relative;
+}
+.hamburger svg
+{
+    width: 30px;
+    color: white;
+    fill: currentColor;
+    padding-bottom: 5px;
+}
+@media only screen and (max-width:972px)
+{
+    .content
+    {
+        top: 38%;
+    }
+}
+@media only screen and (max-width:912px)
+{
+    .Left-nav ul
+    { 
+        display: none;
+        flex-direction: column;
+        max-width: 80px;
+    }
+    .hamburger 
+    {
+        display: block;
+        cursor: pointer;
+        position: relative;
+    }
+    .Left-menu.active 
+    { 
+      display: flex; 
+      position: absolute;
+      top:78px;
+      right:1%;
+      gap: 10px;
+      background-color:white;
+      border-radius: 10px;
+      padding-bottom: 5px;
+    }
+    .Left-menu.active li a 
+    {
+      color: black;
+    }
+    .Left-menu.active li a:hover 
+    {
+      color:cyan;
+    }
+}
+@media only screen and (max-width:865px)
+{
+    .content
+    {
+        top: 40%;
+    }
+    .content img
+    {
+        position: relative;
+        max-width: 230px;
+        left: 25px;
+    }
+    .content p
+    {
+     position: relative;
+     font-size: 12px;
+     left: 50px;
+    }
+    .play-btn,.play-btn svg,.more-info,.more-info svg
+    {
+      max-width:18% ;
+      font-size: 10px;
+    }
+    .content button
+    {
+        position: relative;
+        left: 10px;
+    }
+}
+@media only screen and (max-width:727px)
+{
+    .content
+    {
+        top: 35%;
+    }
+    .content img
+    {
+        left: 27px;
+    }
+    .content p
+    {
+     font-size: 10px;
+     left: 50px;
+    }
+    .play-btn,.play-btn svg,.more-info,.more-info svg
+    {
+      max-width:18% ;
+      font-size: 8px;
+    }
+    .content button
+    {
+        left: 16px;
+    }
+}   
+@media only screen and (max-width:640px)
+{
+    .content
+    {
+        top: 32%;
+    }
+}  
+@media only screen and (max-width:600px)
+{
+    .content
+    {
+        top: 24%;
+    }
+}       
+@media only screen and (max-width:488px)
+{
+    .content
+    {
+        top: 20%;
+    }
+} 
+@media only screen and (max-width:392px)
+{
+    .content
+    {
+        top: 17%;
+    }
+}
+@media only screen and (max-width:427px)
+{
+    .content img
+    {
+        width: 150px;
+        left: 33px;
+    }
+    .content p
+    {
+     font-size: 6px;
+     left: 50px;
+    }
+    .Profile img
+    {
+    width: 15px;
+    height: 15px;
+    }
+    .Notification span
+    {
+        width: 5px;
+        padding-left:5px;
+        height: 10px;
+        font-size: 10px;
+        right: -10px;
+        top: -23px;
+    }
+    .Right-nav svg
+    {
+        width: 12px;
+    }
+    .hamburger svg
+    {
+      width: 17px;
+    }
+    .Right-nav
+    {
+        gap: 5px;
+    }
+    .Left-menu.active
+    {
+        width: 20px;
+        height: 150px;
+        font-size: 8px;
+        top: 30px;
+        gap: 4px;
+        padding-top: 4px;
+        padding-right: 30px;
+    }
+    .dropdown ul
+    {
+        width: 50px;
+        height: 15;
+        font-size: 10px;
+    }
+    .Navigation
+    {
+        top: 25px;
+        height: 50px;
+    }
+}    
